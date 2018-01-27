@@ -10,12 +10,14 @@
       <arg column="usr_flag" jdbcType="INTEGER" javaType="java.lang.Integer" />
     </constructor>
   </resultMap>
+
   <sql id="Base_Column_List" >
     usr_id, usr_name, usr_password, usr_role_id, usr_flag
   </sql>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select 
-    <include refid="Base_Column_List" />
+    select
+     usr_id, usr_name, usr_password, usr_role_id, usr_flag
     from sys_user
     where usr_name = #{usrName,jdbcType=VARCHAR}
   </select>

@@ -26,7 +26,7 @@ public class ChanceController {
     @Autowired
     private ISalChanceBiz salChanceBiz;
 
-    //系统用户表( 根据 指派给-某人ID---》指派给-某人名字)
+    //系统用户表( 根据 指派给-某人ID---》指派--名字)
     @Autowired
     private ISysUserBiz sysUserBiz;
 

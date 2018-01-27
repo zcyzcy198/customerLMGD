@@ -25,9 +25,13 @@ public class SysUserController {
     public String load(SysUser user, HttpSession session){
         String usrName=user.getUsrName();
         SysUser sysUser = this.sysUserMapper.selectByPrimaryKey(usrName);
+        System.out.println(".....user:"+sysUser);
+
 
         //usr_id、usr_name、
         if(null!=sysUser&&sysUser.getUsrPassword().trim().equals(user.getUsrPassword())){//登录成功
+            System.out.println(",,,,,登录成功。。。。");
+
              Long usrId=sysUser.getUsrId();
              Long roleId=sysUser.getUsrRoleId();
             session.setAttribute("usrId",sysUser.getUsrId());
